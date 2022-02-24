@@ -4,7 +4,7 @@ A calculator for simple calculations with a friendly user interface.
 
 ## Description
 
-This calculator is built on a browser to help user to do quick simple calculation. This is one of the project from (The Odin Project)[https://theodinproject.com] Foundation curriculum.
+This calculator is built on a browser to help user to do quick simple calculation. This is one of the project from (The Odin Project) [https://theodinproject.com] Foundation curriculum.
 
 ## How to Use
 
