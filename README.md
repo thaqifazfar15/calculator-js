@@ -4,7 +4,7 @@ A calculator for simple calculations with a friendly user interface.
 
 ## Description
 
-This calculator is built on a browser to help user to do quick simple calculation. This is one of the project from (The Odin Project) [https://theodinproject.com] Foundation curriculum.
+This calculator is built on a browser to help user to do quick simple calculation. This is one of the project from [The Odin Project] (https://theodinproject.com) Foundation curriculum.
 
 ## How to Use
 
@@ -18,10 +18,10 @@ It can be used as a normal calculator where user need to enter their value and o
 
 ## Live Preview
 
-(Calculator-JS) [https://thaqifazfar.github.io/calculator-js]
+[Calculator-JS] (https://thaqifazfar.github.io/calculator-js)
 
 ## Acknowledgement
 
-- (The Odin Project) [https://theodinproject.com]
+- [The Odin Project] (https://theodinproject.com)
 
 ## What I Learned
