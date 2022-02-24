@@ -18,10 +18,10 @@ It can be used as a normal calculator where user need to enter their value and o
 
 ## Live Preview
 
-(Calculator-JS)[thaqifazfar.github.io/calculator-js]
+(Calculator-JS) [https://thaqifazfar.github.io/calculator-js]
 
 ## Acknowledgement
 
-- (The Odin Project)[https://theodinproject.com]
+- (The Odin Project) [https://theodinproject.com]
 
 ## What I Learned
