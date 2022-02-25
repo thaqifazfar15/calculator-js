@@ -34,25 +34,30 @@ body {
 }
 
 .main-container {
+  padding-bottom: 2.5rem;
+}
+
+.calculator {
+  display: flex;
+  flex-direction: column;
   width: min(90vw, 28rem);
   height: 37rem;
   background-color: var(--english-violet-2);
-  margin-bottom: 2.4rem;
   border-radius: 1.3rem;
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
 .calculator-screen {
-  margin: 1.3em auto;
   width: 90%;
-  height: 8em;
+  height: 8rem;
+  margin: 1.3rem auto;
   border-radius: 0.8em;
   background-color: var(--silver-sand);
 }
 
 .button-container {
-  background-color: var(--silver-sand);
-  margin: 1.3rem auto;
+  background-color: var(--light-goldenrod-yellow);
+  margin-inline: auto;
   width: 90%;
   height: 25em;
   border-radius: 00.8em;
