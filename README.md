@@ -13,7 +13,7 @@ It can be used as a normal calculator where user need to enter their value and o
 ## Built With
 
 - HTML
-- SASS
+- CSS
 - JavaScript
 
 ## Live Preview
