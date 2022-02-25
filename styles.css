@@ -17,7 +17,7 @@ body {
 :root {
   --light-goldenrod-yellow: #eaf0ceff;
   --silver-sand: #c0c5c1ff;
-  --roman-silver: #7d8491ff;
+  --roman-silver: #7d8491;
   --english-violet: #574b60ff;
   --english-violet-2: #3f334dff;
 }
@@ -56,11 +56,53 @@ body {
 }
 
 .button-container {
-  background-color: var(--light-goldenrod-yellow);
   margin-inline: auto;
   width: 90%;
   height: 25em;
-  border-radius: 00.8em;
+  display: grid;
+  gap: 0.8rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.btn {
+  background-color: var(--silver-sand);
+  border-radius: 0.4rem;
+  width: 100%;
+  height: 100%;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.btn-AC {
+  background-color: rgb(228, 67, 67);
+  color: white;
+  font-weight: bold;
+}
+
+.btn-AC:hover {
+  background-color: rgba(228, 67, 67, 0.822);
+}
+
+.btn-DEL {
+  background-color: rgb(124, 126, 131);
+}
+
+.btn-DEL:hover {
+  background-color: rgba(124, 126, 131, 0.753);
+}
+
+.btn-normal:hover {
+  background-color: rgba(125, 132, 145, 150);
+}
+
+.btn-0 {
+  grid-column-start: 1;
+  grid-column-end: 3;
 }
 
 /*-----x----- Main Container ------x----*/
