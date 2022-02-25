@@ -25,3 +25,6 @@ It can be used as a normal calculator where user need to enter their value and o
 - [The Odin Project](https://theodinproject.com)
 
 ## What I Learned
+
+- How to use and merge grid in CSS.
+- How to create a responsive grid.
