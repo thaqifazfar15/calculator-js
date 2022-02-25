@@ -18,7 +18,7 @@ It can be used as a normal calculator where user need to enter their value and o
 
 ## Live Preview
 
-[Calculator-JS](https://thaqifazfar.github.io/calculator-js)
+[Calculator-JS](https://thaqifazfar15.github.io/calculator-js)
 
 ## Acknowledgement
 
