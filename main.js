@@ -33,3 +33,21 @@ buttonDEL.addEventListener("click", function () {
     removeClass(buttonDEL, "btn-DEL-click");
   }, 100);
 });
+
+let number1 = "";
+let numerber2 = "";
+counter = 0;
+
+function round(value, decimals) {
+  //so number don't overfloat
+  return Number(Math.round(value + "e" + decimals) + "e-" + decimals);
+}
+
+function operate(num1, operator, num2) {
+  if (num2 == 0 && operator == "/") {
+    console.log("Math Error");
+  } else {
+    let num = (eval(`${num1}${operator}${num2}`) * 10) / 10;
+    return round(num, 3).toString();
+  }
+}
