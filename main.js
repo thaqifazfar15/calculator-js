@@ -34,8 +34,8 @@ buttonDEL.addEventListener("click", function () {
   }, 100);
 });
 
-let number1 = "";
-let numerber2 = "";
+let input1 = "";
+let input2 = "";
 counter = 0;
 
 function round(value, decimals) {

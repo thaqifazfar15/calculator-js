@@ -13,6 +13,10 @@ body {
   background-color: var(--light-goldenrod-yellow);
 }
 
+button {
+  border: none;
+}
+
 /* Color Template*/
 :root {
   --light-goldenrod-yellow: #eaf0ceff;
