@@ -2,55 +2,37 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=ed,kge" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calculator JS | Thaqif Azfar</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+    <title>Calculator | Thaif Azfar</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="container">
-      <main class="main-container">
-        <div class="calculator">
-          <div class="calculator-screen"></div>
-          <div class="button-container">
-            <button class="btn btn-AC">AC</button>
-            <button class="btn btn-plusminus btn-normal">±</button>
-            <button class="btn btn-multiply btn-normal">x</button>
-            <button class="btn btn-DEL">DEL</button>
-            <button class="btn btn-7 btn-normal">7</button>
-            <button class="btn btn-8 btn-normal">8</button>
-            <button class="btn btn-9 btn-normal">9</button>
-            <button class="btn btn-divide btn-normal">÷</button>
-            <button class="btn btn-4 btn-normal">4</button>
-            <button class="btn btn-5 btn-normal">5</button>
-            <button class="btn btn-6 btn-normal">6</button>
-            <button class="btn btn-minus btn-normal">﹣</button>
-            <button class="btn btn-1 btn-normal">1</button>
-            <button class="btn btn-2 btn-normal">2</button>
-            <button class="btn btn-3 btn-normal">3</button>
-            <button class="btn btn-plus btn-normal">+</button>
-            <button class="btn btn-0 btn-normal">0</button>
-            <button class="btn btn-point btn-normal">.</button>
-            <button class="btn btn-equal btn-normal">=</button>
-          </div>
-        </div>
-      </main>
-      <footer class="footer-container">
-        <div class="footer-text">
-          Copyright 2022 © Thaqif Azfar | All Rights Reserved
-        </div>
-        <div class="footer-img">
-          <a
-            href="https://github.com/thaqifazfar15/etch-a-sketch"
-            target="_blank"
-            ><i class="fa fa-github" style="font-size: 1.5rem"></i
-          ></a>
-        </div>
-      </footer>
+    <div class="calculator">
+      <div class="calculator-screen">
+        <div data-previous-operand class="previous-operator">24756 +</div>
+        <div data-current-operand class="current-operator">7848</div>
+      </div>
+      <div class="number-container">
+        <button data-clear class="span-2 orange">AC</button>
+        <button data-delete>DEL</button>
+        <button data-operation>×</button>
+        <button data-number>1</button>
+        <button data-number>2</button>
+        <button data-number>3</button>
+        <button data-operation>÷</button>
+        <button data-number>4</button>
+        <button data-number>5</button>
+        <button data-number>6</button>
+        <button data-operation>+</button>
+        <button data-number>7</button>
+        <button data-number>8</button>
+        <button data-number>9</button>
+        <button data-operation>-</button>
+        <button data-number>.</button>
+        <button data-number>0</button>
+        <button data-equal class="span-2">=</button>
+      </div>
     </div>
   </body>
   <script src="main.js"></script>

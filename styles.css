@@ -1,135 +1,106 @@
-/*----------- Global Classes -----------*/
+@import url("https://fonts.googleapis.com/css2?family=Biryani:wght@400;700&display=swap");
 
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
-/*   font-family: 'Source Sans Pro', sans-serif;   */
+/* font-family: 'Biryani', sans-serif; */
 
-html,
+/* --------color palette-------- */
+
+:root {
+  --light-blue: #8ecae6;
+  --blue: #219ebc;
+  --blue-hover: #219dbcb9;
+  --dark-blue: #023047;
+  --yellow: #ffb703;
+  --orange: #fb8500;
+}
+
+/* ----x---color palette---x---- */
+
 body {
   margin: 0;
-  padding: 0;
   box-sizing: border-box;
-  overflow-x: hidden;
-  font-family: "Source Sans Pro";
-  background-color: var(--light-goldenrod-yellow);
-}
-
-button {
-  border: none;
-}
-
-/* Color Template*/
-:root {
-  --light-goldenrod-yellow: #eaf0ceff;
-  --silver-sand: #c0c5c1ff;
-  --roman-silver: #7d8491;
-  --english-violet: #574b60ff;
-  --english-violet-2: #3f334dff;
-}
-
-/*-----x----- Global Classes ------x----*/
-
-/*----------- Main Container -----------*/
-.container {
-  position: relative;
-  min-height: 100vh;
+  font-family: "Biryani", sans-serif;
+  height: 100vh;
+  width: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.main-container {
-  padding-bottom: 2.5rem;
+  color: white;
+  background-color: var(--light-blue);
 }
 
 .calculator {
+  width: min(90%, 440px);
+  height: 600px;
+  background-color: var(--dark-blue);
+  border-radius: 1.6rem;
   display: flex;
   flex-direction: column;
-  width: min(90vw, 28rem);
-  height: 37rem;
-  background-color: var(--english-violet-2);
-  border-radius: 1.3rem;
-  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .calculator-screen {
   width: 90%;
-  height: 8rem;
-  margin: 1.3rem auto;
-  border-radius: 0.8em;
-  background-color: var(--silver-sand);
+  height: auto;
+  background-color: var(--blue);
+  border-radius: 0.9rem;
+  text-align: end;
+  margin: 1.5em 0;
+  padding: 0.9rem 1rem;
+  padding-bottom: 0;
+  word-wrap: break-word;
+  word-break: break-all;
+  box-sizing: border-box;
 }
 
-.button-container {
-  margin-inline: auto;
+.previous-operator {
+  font-size: 1.3em;
+}
+
+.current-operator {
+  line-height: 1.3em;
+  font-size: 2.8em;
+  font-weight: bold;
+}
+
+.number-container {
   width: 90%;
-  height: 25em;
+  height: 70%;
   display: grid;
-  gap: 0.8rem;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.8em;
+  padding: 0;
 }
 
-.btn {
-  background-color: var(--silver-sand);
-  border-radius: 0.4rem;
+button {
   width: 100%;
   height: 100%;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.8rem;
-  font-weight: bold;
-}
-
-.btn-AC {
-  background-color: rgb(228, 67, 67);
+  border-radius: 0.3em;
+  border: none;
+  background-color: var(--blue);
   color: white;
-  font-weight: bold;
+  font-family: "Biryani", sans-serif;
+  font-size: clamp(1.6em, 4vw, 1.9rem);
+  padding: 0;
 }
 
-.btn-AC-click {
-  background-color: rgb(192, 0, 0);
+button:hover {
+  background-color: var(--blue-hover);
 }
 
-.btn-DEL {
-  background-color: rgb(124, 126, 131);
+.span-2 {
+  grid-column: span 2;
 }
 
-.btn-DEL-click {
-  background-color: rgb(93, 93, 95);
+.orange {
+  background-color: rgb(209, 62, 62);
 }
 
-.btn-0 {
-  grid-column-start: 1;
-  grid-column-end: 3;
+.orange:hover {
+  background-color: rgba(209, 62, 62, 0.842);
 }
-
-.click {
-  background-color: rgba(125, 132, 145, 0.9);
-}
-
-/*-----x----- Main Container ------x----*/
-
-/*----------- Footer -----------*/
-
-footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 2.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: clamp(0.9rem, 4vw, 1.1rem);
-}
-.footer-img i {
-  color: black;
-}
-
-.footer-img i:hover {
-  color: rgba(0, 0, 0, 0.7);
-}
-
-/*-----x----- Footer ------x----*/
