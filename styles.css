@@ -91,6 +91,7 @@ button {
   font-size: clamp(1em, 6.2vw, 1.9rem);
   padding: max(0.3em);
   box-sizing: border-box;
+  appearance: none;
 }
 
 button:hover {
