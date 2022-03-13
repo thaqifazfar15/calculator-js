@@ -5,9 +5,9 @@
 /* --------color palette-------- */
 
 :root {
-  --light-blue: #8ecae6;
-  --blue: #219ebc;
-  --blue-hover: #219dbcb9;
+  --light-blue: #cadfe9;
+  --blue: #0a84a3;
+  --blue-hover: #219dbca2;
   --dark-blue: #023047;
   --yellow: #ffb703;
   --orange: #fb8500;
@@ -57,10 +57,12 @@ body {
 }
 
 .previous-operator {
+  min-height: 1.3em;
   font-size: 1.3em;
 }
 
 .current-operator {
+  min-height: 1.5em;
   line-height: 1.3em;
   font-size: 2.8em;
   font-weight: bold;
@@ -86,8 +88,9 @@ button {
   background-color: var(--blue);
   color: white;
   font-family: "Biryani", sans-serif;
-  font-size: clamp(1.6em, 4vw, 1.9rem);
-  padding: 0;
+  font-size: clamp(1.3em, 4vw, 1.9rem);
+  padding: 0.3em;
+  margin-bottom: -0.3em;
 }
 
 button:hover {
