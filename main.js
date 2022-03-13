@@ -28,10 +28,58 @@ class Calculator {
 
   appendNumber(number) {
     if (number === "." && this.currentOperand.includes(".")) return;
-    this.currentOperand += number;
+    this.currentOperand = this.currentOperand.toString() + number.toString();
   }
 
-  compute() {}
+  chooseOperation(operation) {
+    if (this.currentOperand === "") return;
+
+    if (this.previousOperand !== "") {
+      this.compute();
+    }
+
+    for (let i = 0; i < operationButtons.length; i++) {
+      //cannot put operation right after operation
+      if (
+        operation === operationButtons[i].innerText &&
+        this.previousOperand.includes(operation) &&
+        this.currentOperand === ""
+      )
+        return;
+    }
+    this.operation = operation;
+    this.previousOperand = this.currentOperand + this.operation;
+    this.currentOperand = "";
+  }
+
+  compute() {
+    let result;
+    const prev = parseFloat(this.previousOperand);
+    const curr = parseFloat(this.currentOperand);
+
+    if (this.previousOperand === "" || this.currentOperand === "") return;
+
+    switch (this.operation) {
+      case "+":
+        result = prev + curr;
+        break;
+
+      case "-":
+        result = prev - curr;
+        break;
+
+      case "×":
+        result = prev * curr;
+        break;
+
+      case "÷":
+        result = prev / curr;
+        break;
+    }
+    this.currentOperand = result;
+    this.previousOperand = "";
+    this.operation = undefined;
+  }
 
   updateDisplay() {
     this.previousOperandTextElement.innerText = this.previousOperand;
@@ -58,5 +106,17 @@ allClearButton.addEventListener("click", () => {
 
 deleteButton.addEventListener("click", () => {
   calculator.delete();
+  calculator.updateDisplay();
+});
+
+operationButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    calculator.chooseOperation(button.innerText);
+    calculator.updateDisplay();
+  });
+});
+
+equalButton.addEventListener("click", () => {
+  calculator.compute();
   calculator.updateDisplay();
 });
