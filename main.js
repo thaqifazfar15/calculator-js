@@ -59,6 +59,14 @@ class Calculator {
 
     if (this.previousOperand === "" || this.currentOperand === "") return;
 
+    if (prev === 0 && this.operation === "÷" && curr === 0) {
+      result = "Math Error";
+      this.currentOperand = result;
+      this.previousOperand = "";
+      this.operation = undefined;
+      return;
+    }
+
     switch (this.operation) {
       case "+":
         result = prev + curr;
@@ -75,6 +83,9 @@ class Calculator {
       case "÷":
         result = prev / curr;
         break;
+
+      default:
+        return "Math Error";
     }
     this.currentOperand = result;
     this.previousOperand = "";
