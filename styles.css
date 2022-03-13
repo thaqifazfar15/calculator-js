@@ -76,21 +76,21 @@ body {
   align-items: center;
   grid-template-rows: repeat(5, 1fr);
   grid-template-columns: repeat(4, 1fr);
-  gap: 0.8em;
+  gap: 1em;
   padding: 0;
 }
 
 button {
-  width: 100%;
-  height: 100%;
+  width: max(100%);
+  height: auto;
   border-radius: 0.3em;
   border: none;
   background-color: var(--blue);
   color: white;
   font-family: "Biryani", sans-serif;
-  font-size: clamp(1.3em, 4vw, 1.9rem);
-  padding: 0.3em;
-  margin-bottom: -0.3em;
+  font-size: clamp(1em, 6.2vw, 1.9rem);
+  padding: max(0.3em);
+  box-sizing: border-box;
 }
 
 button:hover {
