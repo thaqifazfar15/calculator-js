@@ -88,6 +88,7 @@ button {
   font-family: "Biryani", sans-serif;
   font-size: clamp(1em, 6.2vw, 1.9rem);
   padding: 0.3em;
+  margin: 0;
   box-sizing: border-box;
   appearance: none;
 }
