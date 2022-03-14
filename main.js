@@ -52,6 +52,15 @@ class Calculator {
     this.currentOperand = "";
   }
 
+  isValid() {
+    if (
+      this.currentOperand === "Math Error" ||
+      this.currentOperand === "Infinity"
+    ) {
+      this.clear();
+    }
+  }
+
   compute() {
     let result;
     const prev = parseFloat(this.previousOperand);
@@ -61,6 +70,14 @@ class Calculator {
 
     if (prev === 0 && this.operation === "÷" && curr === 0) {
       result = "Math Error";
+      this.currentOperand = result;
+      this.previousOperand = "";
+      this.operation = undefined;
+      return;
+    }
+
+    if (this.operation === "÷" && curr === 0) {
+      result = "Infinity";
       this.currentOperand = result;
       this.previousOperand = "";
       this.operation = undefined;
@@ -87,7 +104,7 @@ class Calculator {
       default:
         return "Math Error";
     }
-    this.currentOperand = result;
+    this.currentOperand = Math.round(result * 1000) / 1000;
     this.previousOperand = "";
     this.operation = undefined;
   }
@@ -105,6 +122,7 @@ const calculator = new Calculator(
 
 numberButtons.forEach((button) => {
   button.addEventListener("click", () => {
+    calculator.isValid();
     calculator.appendNumber(button.innerText);
     calculator.updateDisplay();
   });
@@ -122,6 +140,7 @@ deleteButton.addEventListener("click", () => {
 
 operationButtons.forEach((button) => {
   button.addEventListener("click", () => {
+    calculator.isValid();
     calculator.chooseOperation(button.innerText);
     calculator.updateDisplay();
   });
