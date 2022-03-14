@@ -70,7 +70,7 @@ body {
 
 .number-container {
   width: 90%;
-  height: 70%;
+  height: auto;
   display: grid;
   justify-content: center;
   align-items: center;
@@ -81,15 +81,13 @@ body {
 }
 
 button {
-  width: max(100%);
-  height: auto;
   border-radius: 0.3em;
   border: none;
   background-color: var(--blue);
   color: white;
   font-family: "Biryani", sans-serif;
   font-size: clamp(1em, 6.2vw, 1.9rem);
-  padding: max(0.3em);
+  padding: 0.3em;
   box-sizing: border-box;
   appearance: none;
 }
